@@ -1,9 +1,10 @@
-package server;
+package com.ninjaapps.checkers.server;
 
-import log.AutowiredLogger;
+import com.ninjaapps.checkers.log.AutowiredLogger;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
-import view.game.Pawns;
+import com.ninjaapps.checkers.view.game.old.Pawns;
+import org.springframework.stereotype.Component;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -12,6 +13,7 @@ import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+@Component
 public class TCPServer implements Runnable {
     @AutowiredLogger
     private Logger logger;
@@ -38,7 +40,7 @@ public class TCPServer implements Runnable {
             oos = new ObjectOutputStream(socket.getOutputStream());
             ois = new ObjectInputStream(socket.getInputStream());
         } catch (IOException e) {
-            logger.error("Error while creating server.", e);
+            logger.error("Error while creating com.ninjaapps.checkers.server.", e);
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }

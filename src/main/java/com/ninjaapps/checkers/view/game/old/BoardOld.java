@@ -1,12 +1,15 @@
-package view.game;
+package com.ninjaapps.checkers.view.game.old;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Board {
-    public static final int WIDTH = 8;
+public class BoardOld {
+    @Value("${board.width}")
+    private int width;
 
-    public static final int HEIGHT = 8;
+    @Value("${board.height}")
+    private int height;
 
     private int[][] fields;
 
@@ -15,7 +18,7 @@ public class Board {
     }
 
     public void initializeBoard() {
-        fields = new int[WIDTH][HEIGHT];
+        fields = new int[width][height];
 
         for (int i = 0; i < fields.length; i++) {
             for (int j = 0; j < fields[i].length; j++) {

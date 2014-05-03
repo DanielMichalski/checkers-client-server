@@ -4,5 +4,5 @@
  *      <code>@AutowiredLogger</code><br>
  *      <code>private org.slf4j.Logger logger;</code>
  */
-package log;
+package com.ninjaapps.checkers.log;
 

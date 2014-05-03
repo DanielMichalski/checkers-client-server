@@ -1,7 +1,8 @@
-package server;
+package com.ninjaapps.checkers.server;
 
 import org.slf4j.Logger;
-import view.game.Pawns;
+import com.ninjaapps.checkers.view.game.old.Pawns;
+import org.springframework.stereotype.Component;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -9,6 +10,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
+@Component
 public class TCPClient {
     private Logger logger;
 
@@ -24,7 +26,7 @@ public class TCPClient {
             ois = new ObjectInputStream(gniazdo.getInputStream());
             oos = new ObjectOutputStream(gniazdo.getOutputStream());
         } catch (IOException e) {
-            logger.error("Error while connecting to server", e);
+            logger.error("Error while connecting to com.ninjaapps.checkers.server", e);
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }
@@ -39,10 +41,10 @@ public class TCPClient {
             } catch (IOException e) {
                 flaga = false;
                 disconnect();
-                logger.error("Error while listening server", e);
+                logger.error("Error while listening com.ninjaapps.checkers.server", e);
                 JOptionPane.showMessageDialog(null, e.getMessage());
             } catch (ClassNotFoundException e) {
-                logger.error("Error while listening server", e);
+                logger.error("Error while listening com.ninjaapps.checkers.server", e);
                 JOptionPane.showMessageDialog(null, e.getMessage());
             }
         }
@@ -54,7 +56,7 @@ public class TCPClient {
             oos.writeObject(p);
             oos.flush();
         } catch (IOException ex) {
-            logger.error("Error while sending information to server", ex);
+            logger.error("Error while sending information to com.ninjaapps.checkers.server", ex);
             JOptionPane.showMessageDialog(null, ex.getMessage());
         }
     }

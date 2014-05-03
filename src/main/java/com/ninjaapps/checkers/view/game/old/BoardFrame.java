@@ -1,12 +1,12 @@
-package view.game;
+package com.ninjaapps.checkers.view.game.old;
 
 
-import log.AutowiredLogger;
+import com.ninjaapps.checkers.log.AutowiredLogger;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import server.TCPClient;
-import server.TCPServer;
+import com.ninjaapps.checkers.server.TCPClient;
+import com.ninjaapps.checkers.server.TCPServer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +18,7 @@ public class BoardFrame extends JFrame {
     private Logger logger;
 
     @Autowired
-    private Board plansza;
+    private BoardOld plansza;
 
     @Autowired
     private Pawns pionki;
@@ -483,7 +483,7 @@ public class BoardFrame extends JFrame {
         jLabel1.setText("Oczekiwanie na gracza...");
         //JOptionPane.showMessageDialog(null, "hahah");
 
-        //Thread t = new Thread(new OczekiwanieDialog());
+        //Thread t = new_code Thread(new_code OczekiwanieDialog());
         //t.start();
         SwingUtilities.invokeLater(
                 new Runnable() {
@@ -498,14 +498,14 @@ public class BoardFrame extends JFrame {
 
     private void podlaczDoSerweraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_podlaczDoSerweraActionPerformed
 
-//        ServerConnectDialog dialog = new ServerConnectDialog(this, true);
+//        ServerConnectDialog dialog = new_code ServerConnectDialog(this, true);
 //        dialog.setVisible(true);
 //        if(dialog.isCzyPodano())
 //        {
-//            tcpClient = new TCPClient(dialog.getAdres(), dialog.getPort());
+//            tcpClient = new_code TCPClient(dialog.getAdres(), dialog.getPort());
 //            jLabel1.setText("Oczekiwanie na ruch przeciwnika!");
 //            SwingUtilities.invokeLater(
-//                new Runnable() {
+//                new_code Runnable() {
 //                public void run() {
 //                    pionki = tcpClient.listen();
 //                    jLabel1.setText("Twój ruch!");
