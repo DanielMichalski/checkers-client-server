@@ -1,4 +1,4 @@
-package view.server_connect.view;
+package com.ninjaapps.checkers.view.server_connect.view;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

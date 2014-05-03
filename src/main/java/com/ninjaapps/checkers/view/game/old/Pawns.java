@@ -1,4 +1,4 @@
-package view.game;
+package com.ninjaapps.checkers.view.game.old;
 
 import org.springframework.stereotype.Component;
 

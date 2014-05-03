@@ -1,4 +1,4 @@
-package log;
+package com.ninjaapps.checkers.log;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

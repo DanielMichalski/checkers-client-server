@@ -1,10 +1,10 @@
-package view.server_connect.controller;
+package com.ninjaapps.checkers.view.server_connect.controller;
 
-import log.AutowiredLogger;
+import com.ninjaapps.checkers.log.AutowiredLogger;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import view.server_connect.view.ServerConnectDialog;
+import com.ninjaapps.checkers.view.server_connect.view.ServerConnectDialog;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
