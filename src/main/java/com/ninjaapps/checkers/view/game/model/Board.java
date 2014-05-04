@@ -1,4 +1,4 @@
-package com.ninjaapps.checkers.view.game.new_code.model;
+package com.ninjaapps.checkers.view.game.model;
 
 import org.springframework.stereotype.Component;
 

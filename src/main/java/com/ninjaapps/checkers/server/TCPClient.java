@@ -1,7 +1,6 @@
 package com.ninjaapps.checkers.server;
 
 import org.slf4j.Logger;
-import com.ninjaapps.checkers.view.game.old.Pawns;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
@@ -31,44 +30,44 @@ public class TCPClient {
         }
     }
 
-    public Pawns listen() {
-        Pawns p = null;
-        boolean flaga = true;
-        while (flaga) {
-            try {
-                p = (Pawns) ois.readObject();
-                flaga = false;
-            } catch (IOException e) {
-                flaga = false;
-                disconnect();
-                logger.error("Error while listening com.ninjaapps.checkers.server", e);
-                JOptionPane.showMessageDialog(null, e.getMessage());
-            } catch (ClassNotFoundException e) {
-                logger.error("Error while listening com.ninjaapps.checkers.server", e);
-                JOptionPane.showMessageDialog(null, e.getMessage());
-            }
-        }
-        return p;
-    }
-
-    public void send(Pawns p) {
-        try {
-            oos.writeObject(p);
-            oos.flush();
-        } catch (IOException ex) {
-            logger.error("Error while sending information to com.ninjaapps.checkers.server", ex);
-            JOptionPane.showMessageDialog(null, ex.getMessage());
-        }
-    }
-
-    public void disconnect() {
-        try {
-            ois.close();
-            oos.close();
-            gniazdo.close();
-        } catch (IOException e) {
-            logger.error("Error while disconecting client", e);
-            JOptionPane.showMessageDialog(null, e.getMessage());
-        }
-    }
+//    public Pawns listen() {
+//        Pawns p = null;
+//        boolean flaga = true;
+//        while (flaga) {
+//            try {
+//                p = (Pawns) ois.readObject();
+//                flaga = false;
+//            } catch (IOException e) {
+//                flaga = false;
+//                disconnect();
+//                logger.error("Error while listening com.ninjaapps.checkers.server", e);
+//                JOptionPane.showMessageDialog(null, e.getMessage());
+//            } catch (ClassNotFoundException e) {
+//                logger.error("Error while listening com.ninjaapps.checkers.server", e);
+//                JOptionPane.showMessageDialog(null, e.getMessage());
+//            }
+//        }
+//        return p;
+//    }
+//
+//    public void send(Pawns p) {
+//        try {
+//            oos.writeObject(p);
+//            oos.flush();
+//        } catch (IOException ex) {
+//            logger.error("Error while sending information to com.ninjaapps.checkers.server", ex);
+//            JOptionPane.showMessageDialog(null, ex.getMessage());
+//        }
+//    }
+//
+//    public void disconnect() {
+//        try {
+//            ois.close();
+//            oos.close();
+//            gniazdo.close();
+//        } catch (IOException e) {
+//            logger.error("Error while disconecting client", e);
+//            JOptionPane.showMessageDialog(null, e.getMessage());
+//        }
+//    }
 }

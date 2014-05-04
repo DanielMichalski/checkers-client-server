@@ -1,4 +1,4 @@
-package com.ninjaapps.checkers.view.game.new_code.view;
+package com.ninjaapps.checkers.view.game.view;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -12,10 +12,6 @@ import javax.swing.*;
 public class ButtonsPanel extends JPanel {
     @Value("${game.buttonPanel.newGameBtnText}")
     private String newGameBtnText;
-
-    @Value("${game.buttonPanel.playerLblText}")
-    private String playerLblText;
-
     private JButton newGameBtn;
 
     private JLabel playerLbl;
@@ -28,7 +24,7 @@ public class ButtonsPanel extends JPanel {
         newGameBtn = new JButton(newGameBtnText);
         add(newGameBtn);
 
-        playerLbl = new JLabel(playerLblText);
+        playerLbl = new JLabel();
         add(playerLbl);
     }
 

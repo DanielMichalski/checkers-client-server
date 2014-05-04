@@ -1,4 +1,4 @@
-package com.ninjaapps.checkers.view.game.new_code.view;
+package com.ninjaapps.checkers.view.game.view;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
