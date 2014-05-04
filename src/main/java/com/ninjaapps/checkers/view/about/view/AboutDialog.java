@@ -1,5 +1,6 @@
 package com.ninjaapps.checkers.view.about.view;
 
+import com.ninjaapps.checkers.util.ApplicationUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -23,8 +24,9 @@ public class AboutDialog extends JDialog {
     }
 
     private void initializeDialog() {
+        ApplicationUtil.setSystemLookAndFeel();
         setTitle(dialogName);
-        setSize(200, 200);
+        setSize(250, 150);
         setLocationRelativeTo(null);
         setResizable(false);
     }

@@ -1,5 +1,6 @@
 package com.ninjaapps.checkers.view.game.view;
 
+import com.ninjaapps.checkers.util.ApplicationUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -29,6 +30,7 @@ public class GameFrame extends JFrame
     private ButtonsPanel buttonsPanel;
 
     public void init() {
+        ApplicationUtil.setSystemLookAndFeel();
         setUpFrame();
         initializeComponents();
     }
