@@ -6,6 +6,10 @@ import java.awt.*;
  * Author: Daniel
  */
 public class Const {
+    public static interface Fonts {
+        Font TEXT_AREA_FONT = new Font("Arial", Font.PLAIN, 14);
+    }
+
     public static interface Colors {
         Color BOARD_LIGHT = new Color(215, 220, 123);
         Color BOARD_DARK = new Color(145, 102, 53);

@@ -1,5 +1,7 @@
 package com.ninjaapps.checkers.view.about.view;
 
+import com.ninjaapps.checkers.util.ApplicationUtil;
+import com.ninjaapps.checkers.util.Const;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -24,6 +26,7 @@ public class AboutPanel extends JPanel {
     }
 
     private void setupPanel() {
+        ApplicationUtil.setSystemLookAndFeel();
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
     }
 
@@ -40,6 +43,7 @@ public class AboutPanel extends JPanel {
         aboutTA.setLineWrap(true);
         aboutTA.setWrapStyleWord(true);
         aboutTA.setEditable(false);
+        aboutTA.setFont(Const.Fonts.TEXT_AREA_FONT);
         return aboutTA;
     }
 
